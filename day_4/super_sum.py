@@ -11,9 +11,8 @@ def super_sum(*args):
 		super_sum([20],[30, 40])
 	"""
 	total = 0
-	if args is None:
-		return 0
-	else:
+	if args:
+		
 		for x in args:
 			if type(x) == list:
 				total += sum(x)
