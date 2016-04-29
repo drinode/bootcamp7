@@ -2,13 +2,20 @@ def find_max_min(A):
 	'''
 	Returns the max and min number and puts them in an array
 	'''
-	max_ , min_ = A[0], A[0]
-	A = []
-	B = A
+	l = []
+	max_, min_ = (A[0], A[0])
+	
 	for i in A:
 		if i > max_:
-			max_ = 1
+			max_ = i
+		
 		if i < min_:
-			min_ = 1
-		if min_ == max_:
-			return A.append(B)
+			min_ = i
+	
+	l.append(min_)
+	l.append(max_)
+	if max_ == min_:
+		return A
+	return l
+
+print (find_max_min)
